@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>D3 Examples</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+	<svg width="500" height="500">
+		<!-- Rectangle -->
+		<!-- <rect width="100" height="100" fill="#f44336" stroke="#8BC34A" stroke-width="10" x="5" y="5"></rect> -->
+
+		<!-- Circle, Ellipse, Line -->
+		<!-- <circle r="100" cx="100" cy="100" fill="#9C27B0" stroke="#E91E63" stroke-width=10></circle>
+		<ellipse rx="200" ry="100" cx="205" cy="105" fill="#2196f3" stroke="#000" stroke-width="10"></ellipse>
+		<line x1="25" y1="25" x2="200" y2="200" stroke="red" stroke-width="10"></line> -->
+
+		<!-- Ploygons & Polylines -->
+		<!-- <polygon points="220,10 123,234 300,210 170,250" fill="#607d8b" stroke="#000" stroke-width="10"></polygon> -->
+		<!-- <polyline points="220,10 123,234 300,210 170,250" fill="#607d8b" stroke="#000" stroke-width="10"></polyline> -->
+		<!-- <polyline points="220,10 300,210 170,250 123,234" fill="#ccc" stroke="steelblue" stroke-width="5"></polyline> -->
+		<!-- <polyline points="220,10 300,210 170,250 123,234" fill="none" stroke="steelblue" stroke-width="5"></polyline> -->
+
+		<!-- Paths -->
+		<!-- <path d="
+			M 100, 100 
+			L 300, 150 
+			L 300, 300
+			Z
+			M 150, 200
+			L 30, 30
+			L 10, 200
+			Z
+			"
+			fill="none" stroke="#000" stroke-width="10"></path> -->
+		<!-- <path d="
+			M 100, 100 
+			L 300, 150 
+			L 300, 300
+			Q 200, 400 100,200
+			"
+			fill="none" stroke="#000" stroke-width="10"></path>
+		<path d="
+			m 100, 100 
+			l 300, 150 
+			l 300, 300
+			q 200, 400 100,200
+			"
+			fill="none" stroke="yellow" stroke-width="10"></path> -->
+
+		<!-- Text -->
+		<!-- <text x="50" y="50" fill="steelblue" font-size="30">
+			Hello World!
+			<tspan x="200" y="200">Second Line!</tspan>
+		</text> -->
+
+		<!-- <a xlink:href="https://google.com" target="_blank">
+			<text x="50" y="50" fill="steelblue" font-size="30">
+				Hello World!
+				<tspan x="200" y="200">Second Line!</tspan>
+			</text>
+		</a> -->
+
+		<!-- Definitions, Groups & Markers -->
+		<!-- <defs>
+			<rect id="rectangle" height="30" width="30" fill="steelblue" stroke="#ddd" stroke-width="5" x="0" y="0"></rect>
+			<rect id="rectangle2" height="30" width="30" fill="red" stroke="#ddd" stroke-width="5" x="100" y="100"></rect>
+			<g id="rect-group">
+				<rect height="50" width="50" fill="red"></rect>
+				<rect height="50" width="50" fill="blue" x="50"></rect>
+				<rect height="50" width="50" fill="green" x="100"></rect>
+				<rect height="50" width="50" fill="pink" x="150"></rect>
+				<rect height="50" width="50" fill="orange" x="200"></rect>
+			</g>
+		</defs> -->
+		<!-- <use xlink:href="#rectangle"></use>
+		<use xlink:href="#rectangle" x="100" y="100"></use>
+		<use xlink:href="#rectangle2" x="100" y="100"></use> -->
+		<!-- <use xlink:href="#rect-group"></use>
+		<use xlink:href="#rect-group" x="50" y="50"></use>
+		<use xlink:href="#rect-group" x="100" y="100"></use>
+
+		<use xlink:href="#rect-group" x="200" y="200"></use>
+		<use xlink:href="#rect-group" x="200" y="251"></use>
+		<use xlink:href="#rect-group" x="200" y="302"></use>
+		<use xlink:href="#rect-group" x="200" y="353"></use>
+		<use xlink:href="#rect-group" x="200" y="404"></use> -->
+
+		<!-- Text Paths -->
+		<defs>
+			<path id="custom-text-path"
+				d="
+					M 0, 0
+					L 100, 300
+				"></path>
+			<path id="curved-text-path"
+				d="
+					M 100, 100
+					Q 300, 10 200, 200
+				"></path>
+		</defs>
+
+		<text x="100" y="100" stroke="#000" font-size="30">
+			<textPath xlink:href="#custom-text-path">
+				Hello World!
+			</textPath>
+
+			<textPath xlink:href="#curved-text-path">
+				Curved Text Path!!!
+			</textPath>
+		</text>
+
+		<text x="60" y="20" stroke="#ff0000" font-size="40" fill="#fff">
+			<textPath xlink:href="#curved-text-path">
+				New Curved Text Path!!!
+			</textPath>
+		</text>
+	</svg>
+
+
+</body>
+</html>
